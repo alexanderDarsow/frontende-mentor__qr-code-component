@@ -1,0 +1,67 @@
+/* Colors */
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-light: hsl(212, 45%, 89%);
+  --clr-blue-gray: hsl(220, 15%, 55%);
+  --clr-blue-dark: hsl(218, 44%, 22%);
+
+  --qr-max-width: 295px;
+  --qr-box-radius: 18px;
+  --qr-content-padding: 1rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --ff-normal: "Outfit", sans-serif;
+}
+
+/*  Basics to structure the page layout */
+body {
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+
+  font-family: var(--ff-normal);
+  background-color: var(--clr-gray-light);
+  margin: 0 1.5rem;
+}
+
+.qr-code {
+  max-width: var(--qr-max-width);
+  align-self: center;
+  border-radius: var(--qr-box-radius);
+  padding: var(--qr-content-padding);
+
+  background-color: var(--clr-white);
+
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--clr-blue-gray);
+}
+
+.qr-code__img {
+  max-width: 100%;
+  border-radius: calc(var(--qr-box-radius) / 2);
+}
+
+.qr-code__content {
+  max-width: calc(100% - 2 * var(--qr-content-padding));
+  margin-inline: auto;
+}
+
+.qr-code__content h2 {
+  color: var(--clr-blue-dark);
+}
+
+/* Frontend Mentor Styles */
+.attribution {
+  margin-bottom: 0.5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
